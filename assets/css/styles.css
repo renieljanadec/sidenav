@@ -1,0 +1,185 @@
+@font-face
+{
+    font-family: 'CircularTT-Book';
+    src: url('../font/CircularTT/CircularTT-Book.ttf');
+    font-weight: 100;
+}
+
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+
+body
+{
+    font-family: 'CircularTT-Book', sans-serif;
+}
+
+/* navigation */
+.default-navbar
+{
+    background: linear-gradient(145deg, rgb(232, 157, 18), rgb(241, 3, 74));
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+.default-navbar .navbar-brand, .default-navbar .nav-link
+{
+    color: #fff;
+}
+
+.default-navbar .navbar-brand:hover, .default-navbar .nav-link:hover
+{
+    color: rgba(37, 35, 35, 0.548);
+    transition: all ease-out .4s;
+}
+
+/*.scrolled
+{
+    background: linear-gradient(145deg, rgb(247, 35, 162), rgb(137, 5, 212));
+}*/
+
+/* custom container */
+.custom-container
+{
+    padding-top: 7rem;
+    padding-bottom: .5rem;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* social links */
+.social
+{
+    padding-bottom: 12px;
+}
+
+.social a
+{
+    color: #fff;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 25px;
+    transform: rotate(0deg);
+    transition-duration: .6s;
+    text-decoration: none;
+}
+
+.social a:hover
+{
+    transform: rotate(360deg);
+    transition-duration: .7s;
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+
+/* divider block */
+.block
+{
+    border-top: 3px solid rgba(239, 116, 11, 0.92);
+    padding: 0;
+    width: 7%;
+}
+
+/* p tag */
+.text
+{
+    margin-top: 12px;
+}
+
+/* main button */
+.btn-orange
+{
+    border-radius: 18px;
+    background-color:rgba(239, 116, 11, 0.92);
+    color: rgb(255, 254, 253);
+    font-size: 15px;
+    width: 184px;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0, 0.05);
+}
+
+.btn-orange:focus
+{
+    box-shadow: unset !important;
+}
+
+/* main h1 */
+.main-heading
+{
+    font-size: 3.75rem;
+}
+
+/* MEDIA QUERIES */
+
+/* for larger devices */
+@media(min-width: 992px)
+{
+    /* activate side nav */
+    .default-navbar
+    {
+        display: flex;
+        flex-direction: column;
+        width: 15rem;
+        min-height: 100vh;
+        position: fixed;
+        align-items: flex-start;
+    }
+
+    /* adjust nav-list items */
+    .default-navbar .navbar-nav
+    {
+        flex-direction: column;
+    }
+
+    .custom-container
+    {
+       padding-left: 17rem;
+       min-height: 90vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+}
+
+/* for smaller devices */
+@media (max-width: 991px)
+{
+    .default-navbar .navbar-toggler
+    {
+        outline: none;
+    }
+
+    .default-navbar .navbar-toggler-icon
+    {
+        background-image: url('../images/burg.svg');
+        outline: none;
+    }
+
+    .default-navbar .nav-link
+    {
+        text-align: center;
+    }
+
+    .block
+    {
+        width: 15%;
+    }
+
+    /* hide social links in smaller devices */
+    .social
+    {
+        display: none;
+    }
+
+    .main-heading
+    {
+        font-size: 2rem;
+    }
+}
