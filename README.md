@@ -1,2 +1,2 @@
 # sidenav
-Side Navigation based on Bootstrap 4
+A side navbar I did based on Bootstrap 4
